@@ -6,7 +6,7 @@
   <% @wiki_posts.each do |wiki_post| %>
     <%= render wiki_post %>
     <p>
-      <%= link_to "Show this wiki post", wiki_post %>
+      <%= link_to wiki_post.title, wiki_post %>
     </p>
   <% end %>
 </div>

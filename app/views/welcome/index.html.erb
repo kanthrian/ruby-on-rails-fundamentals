@@ -1,2 +1,12 @@
-<h1>Hello, World!</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>Wiki</h1>
+<div>
+    <% @posts.each do |post| %>
+        <p>
+            <h4><%= post.title %></h4>
+            <%= link_to "View", wiki_posts_path(post) %>
+        </p>
+    <% end %>
+</div>
+
+<%= link_to "About", welcome_about_path %>
+<%= link_to "New Post", new_wiki_post_path %>

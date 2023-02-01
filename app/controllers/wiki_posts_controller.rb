@@ -10,6 +10,10 @@ class WikiPostsController < ApplicationController
   def show
   end
 
+  def example
+    render "example"
+  end
+
   # GET /wiki_posts/new
   def new
     @wiki_post = WikiPost.new
@@ -65,6 +69,6 @@ class WikiPostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def wiki_post_params
-      params.fetch(:wiki_post, {})
+      params.fetch(:wiki_post, {}).permit(:title, :description, :image, :author)
     end
 end

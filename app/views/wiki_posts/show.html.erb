@@ -3,6 +3,25 @@
 <%= render @wiki_post %>
 
 <div>
+  <h1>
+    <%= @wiki_post.title %>
+  </h1>
+
+  <%# <%= @wiki_post.image %> %>
+  
+  <p>
+    <%= @wiki_post.description %>
+  </p>
+  <p>
+    By: <%= @wiki_post.author %>
+  </p>
+  <p>
+    Created: <%= @wiki_post.created_at %>
+  </p>
+  <p>
+    Updated: <%= @wiki_post.updated_at %>
+  </p>
+
   <%= link_to "Edit this wiki post", edit_wiki_post_path(@wiki_post) %> |
   <%= link_to "Back to wiki posts", wiki_posts_path %>
 
